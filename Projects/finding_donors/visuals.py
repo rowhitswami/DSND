@@ -44,7 +44,7 @@ def distribution(data, transformed = False):
         fig.suptitle("Skewed Distributions of Continuous Census Data Features", \
             fontsize = 16, y = 1.03)
 
-    fig.tight_layout()
+    
     fig.show()
 
 
@@ -63,7 +63,7 @@ def evaluate(results, accuracy, f1):
     fig, ax = pl.subplots(2, 3, figsize = (11,7))
 
     # Constants
-    bar_width = 0.3
+    bar_width = 0.5
     colors = ['#A00000','#00A0A0','#00A000']
     
     # Super loop to plot four panels of data
@@ -115,7 +115,6 @@ def evaluate(results, accuracy, f1):
     
     # Aesthetics
     pl.suptitle("Performance Metrics for Three Supervised Learning Models", fontsize = 16, y = 1.10)
-    pl.tight_layout()
     pl.show()
     
 
@@ -139,5 +138,4 @@ def feature_plot(importances, X_train, y_train):
     pl.xlabel("Feature", fontsize = 12)
     
     pl.legend(loc = 'upper center')
-    pl.tight_layout()
     pl.show()  
